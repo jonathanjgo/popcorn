@@ -25,9 +25,7 @@ public class World : MonoBehaviour
         {
             if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
             {
-
                 Set();
-                TimerScript.state = READY;
             }
         }
     }
@@ -42,7 +40,5 @@ public class World : MonoBehaviour
         {
             KernelList[i] = (GameObject)Instantiate(kernel,new Vector3(0,0,0),new Quaternion(0,0,0,0));
         }
-        TimerScript.time = 33.18f;
-        TimerScript.popped = 0;
     }
 }

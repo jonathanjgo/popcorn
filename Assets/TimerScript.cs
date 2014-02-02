@@ -57,11 +57,18 @@ public class TimerScript : MonoBehaviour {
 			if (time < -5f)
 			{
 				GetComponent<TextMesh>().text = "RESET" + "\n" + finalCount.ToString();	
+				if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+				{	
+					state = READY;
+					time = 33.18f;
+					popped = 0;
+				}
 			}
 			else
 			{
 				GetComponent<TextMesh>().text = "DONE" + "\n" + finalCount.ToString();
 			}
 		}
+
 	}
 }
