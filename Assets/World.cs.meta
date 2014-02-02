@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 6e890f89365b00e4fbc72ae530a2827e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - kernel: {fileID: 2800000, guid: baf8e77fa3de1564daf73dc0ad555d87, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

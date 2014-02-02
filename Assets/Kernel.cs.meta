@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ad449fd75841044429d6691faac04e46
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - pop1: {fileID: 8300000, guid: 0d1c350cedbc1ee4da79eea8c2879e0d, type: 3}
+  - poppedTexture: {fileID: 21300000, guid: 0fdcd68a3ec35c14d8c5f7f93ffde9d2, type: 3}
+  - poppedTexture2: {fileID: 21300000, guid: 82eadeeefc8508c44bd24be2b5a640fe, type: 3}
+  - poppedTexture3: {fileID: 21300000, guid: a7e4a105483149b429e16e518aaed8bf, type: 3}
+  - poppedTexture4: {fileID: 21300000, guid: 5746f2adaad112a4288c567e7b923c68, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
