@@ -63,6 +63,9 @@ public class TimerScript : MonoBehaviour {
 					state = READY;
 					time = 33.18f;
 					popped = 0;
+					GameObject s = GameObject.Find("ScoreBox");
+
+					s.GetComponent<ScoreScreen>().Hide ();
 				}
 			}
 			else

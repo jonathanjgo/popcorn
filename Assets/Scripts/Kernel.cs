@@ -5,6 +5,7 @@ public class Kernel : MonoBehaviour {
 
 	public float startsize = 1.4f;
 	public float popsize = 1f;
+	public float popsizevary = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,7 @@ public class Kernel : MonoBehaviour {
 			GetComponent<CircleCollider2D>().radius = .5f;
 			collider2D.transform.localScale = collider2D.transform.localScale * 2;
 
-			transform.localScale *= popsize;
+			transform.localScale *= popsize + Random.Range (-popsizevary,popsizevary);;
 	
 
 			int popNum = Random.Range(0,3);

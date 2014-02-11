@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimerScript.cs">
     <Files>
       <File FileName="Assets/Scripts/Kernel.cs" Line="7" Column="26" />
-      <File FileName="Assets/Scripts/PlayerInput.cs" Line="51" Column="4" />
-      <File FileName="Assets/Scripts/TimerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TimerScript.cs" Line="56" Column="16" />
       <File FileName="Assets/Scripts/World.cs" Line="41" Column="104" />
+      <File FileName="Assets/Scripts/ScoreScreen.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
