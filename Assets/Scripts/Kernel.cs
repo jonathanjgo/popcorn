@@ -3,9 +3,12 @@ using System.Collections;
 
 public class Kernel : MonoBehaviour {
 
+	public float startsize = 1.4f;
+	public float popsize = 1f;
+
 	// Use this for initialization
 	void Start () {
-	
+		transform.localScale *= startsize;
 	}
 
 
@@ -25,7 +28,7 @@ public class Kernel : MonoBehaviour {
 			GetComponent<CircleCollider2D>().radius = .5f;
 			collider2D.transform.localScale = collider2D.transform.localScale * 2;
 
-			transform.localScale /= 1.7f;
+			transform.localScale *= popsize;
 	
 
 			int popNum = Random.Range(0,3);

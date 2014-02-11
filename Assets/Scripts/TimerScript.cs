@@ -53,6 +53,7 @@ public class TimerScript : MonoBehaviour {
 
 		if (state == DONE)
 		{
+			ShowScore();
 			time -= Time.deltaTime;
 			if (time < -5f)
 			{
@@ -69,6 +70,12 @@ public class TimerScript : MonoBehaviour {
 				GetComponent<TextMesh>().text = "DONE" + "\n" + finalCount.ToString();
 			}
 		}
+
+	}
+
+	void ShowScore(){
+		GameObject s = GameObject.Find("ScoreBox");
+		s.GetComponent<ScoreScreen>().Show ();
 
 	}
 }
