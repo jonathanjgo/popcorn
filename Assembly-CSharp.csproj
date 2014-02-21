@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Kernel.cs" />
+     <Compile Include="Assets\Scripts\OutDetect.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\PositionCamera.cs" />
      <Compile Include="Assets\Scripts\ScoreScreen.cs" />

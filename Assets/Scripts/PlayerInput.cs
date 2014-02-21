@@ -28,7 +28,9 @@ public class PlayerInput : MonoBehaviour {
 					popCorn.GetComponent<Kernel>().pop();
 					Vector2 popCornCenter = popCorn.transform.position;
 
-					popCorn.rigidbody2D.AddForce(Vector2.up * mainKnockback);
+					popCorn.rigidbody2D.AddForce(Vector3.up * mainKnockback);
+					float x = Mathf.Cos(popCorn.transform.eulerAngles.x)*Mathf.Cos(popCorn.transform.eulerAngles.z) * 3000;
+					float y = Mathf.Sin(popCorn.transform.eulerAngles.x)*Mathf.Cos(popCorn.transform.eulerAngles.z) * 3000;
 
 					colliders = Physics2D.OverlapCircleAll(popCornCenter, 1f);
 

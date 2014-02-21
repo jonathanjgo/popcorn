@@ -6,14 +6,14 @@ public class Kernel : MonoBehaviour {
 	public float startsize = 1.4f;
 	public float popsize = 1f;
 	public float popsizevary = 1f;
+	public bool outofbounds = false;
 
-	// Use this for initialization
 	void Start () {
 		transform.localScale *= startsize;
+		transform.eulerAngles = new Vector3 (0, 0, Random.Range (0, 360));
 	}
 
 
-	// Update is called once per frame
 	void Update () {
 	
 	}
