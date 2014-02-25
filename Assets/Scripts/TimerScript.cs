@@ -10,6 +10,8 @@ public class TimerScript : MonoBehaviour {
 
 	public AudioClip sound;
 
+	public float ENDSCORE;
+
 	// Use this for initialization
 	void Start () {
 
@@ -48,6 +50,7 @@ public class TimerScript : MonoBehaviour {
 			if (time < 0)
 			{
 				state = DONE;
+				CalculateScore();
 			}
 		}
 
@@ -57,7 +60,7 @@ public class TimerScript : MonoBehaviour {
 			time -= Time.deltaTime;
 			if (time < -5f)
 			{
-				GetComponent<TextMesh>().text = "RESET" + "\n" + finalCount.ToString();	
+				GetComponent<TextMesh>().text = "RESET" + "\n" + ENDSCORE.ToString();	
 				if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
 				{	
 					state = READY;
@@ -70,10 +73,20 @@ public class TimerScript : MonoBehaviour {
 			}
 			else
 			{
-				GetComponent<TextMesh>().text = "DONE" + "\n" + finalCount.ToString();
+				GetComponent<TextMesh>().text = "DONE" + "\n" + ENDSCORE.ToString();
 			}
 		}
 
+	}
+
+	void CalculateScore(){
+		foreach (GameObject k in GameObject.FindGameObjectsWithTag("Kernel")){
+			if (k.GetComponent<Kernel>().outofbounds)
+				ENDSCORE += 1;
+			else
+				ENDSCORE += 2;
+		}
+		print (ENDSCORE);
 	}
 
 	void ShowScore(){
