@@ -11,6 +11,10 @@ public class Kernel : MonoBehaviour {
 	void Start () {
 		transform.localScale *= startsize;
 		transform.eulerAngles = new Vector3 (0, 0, Random.Range (0, 360));
+        if (!World.grav)
+        {
+            gameObject.rigidbody2D.gravityScale = 0f;
+        }  
 	}
 
 

@@ -12,6 +12,7 @@ public class World : MonoBehaviour
     public const int STARTING = 1;
     public const int RUNNING = 2;
     public const int DONE = 3;
+    public static bool grav = false;
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class World : MonoBehaviour
     }
 
     void Update()
-    {   
+    { 
         if (TimerScript.state == DONE && TimerScript.time < -5f)
         {
             if (Input.anyKeyDown || Input.GetMouseButtonDown(0))

@@ -28,7 +28,16 @@ public class PlayerInput : MonoBehaviour {
 					popCorn.GetComponent<Kernel>().pop();
 					Vector2 popCornCenter = popCorn.transform.position;
 
-					popCorn.rigidbody2D.AddForce(Vector3.up * mainKnockback);
+					if(!World.grav)
+					{
+						print(popCorn.transform.right);
+						popCorn.rigidbody2D.AddForce(popCorn.transform.right*mainKnockback);
+						//popCorn.rigidbody2D.AddForce(new Vector2(Random.Range(-1f,1f),Random.Range(-1f,1f))*mainKnockback);
+					}
+					else
+					{
+						popCorn.rigidbody2D.AddForce(Vector3.up * mainKnockback);
+					}
 					float x = Mathf.Cos(popCorn.transform.eulerAngles.x)*Mathf.Cos(popCorn.transform.eulerAngles.z) * 3000;
 					float y = Mathf.Sin(popCorn.transform.eulerAngles.x)*Mathf.Cos(popCorn.transform.eulerAngles.z) * 3000;
 
