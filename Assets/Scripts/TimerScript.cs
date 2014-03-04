@@ -81,10 +81,13 @@ public class TimerScript : MonoBehaviour {
 
 	void CalculateScore(){
 		foreach (GameObject k in GameObject.FindGameObjectsWithTag("Kernel")){
-			if (k.GetComponent<Kernel>().outofbounds)
-				ENDSCORE += 1;
-			else
-				ENDSCORE += 2;
+			if (k.GetComponent<Kernel>().isPopped()){
+
+				if (k.GetComponent<Kernel>().outofbounds)
+					ENDSCORE += 1;
+				else
+					ENDSCORE += 2;
+			}
 		}
 		print (ENDSCORE);
 	}
