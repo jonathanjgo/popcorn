@@ -10,7 +10,7 @@ public class TimerScript : MonoBehaviour {
 
 	public AudioClip sound;
 
-	public float ENDSCORE;
+	public float ENDSCORE = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +22,7 @@ public class TimerScript : MonoBehaviour {
 
 	public static int popped = 0;
 
-	public int finalCount;
+	public int finalCount = 0;
 	public static int state = READY;
 
 	void Update () {
@@ -66,6 +66,8 @@ public class TimerScript : MonoBehaviour {
 					state = READY;
 					time = 33.18f;
 					popped = 0;
+					ENDSCORE = 0;
+					finalCount = 0;
 					GameObject s = GameObject.Find("ScoreBox");
 
 					s.GetComponent<ScoreScreen>().Hide ();
