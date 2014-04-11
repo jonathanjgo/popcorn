@@ -12,7 +12,7 @@ public class World : MonoBehaviour
     public const int STARTING = 1;
     public const int RUNNING = 2;
     public const int DONE = 3;
-    public static bool grav = false;
+    public static bool grav = true;
 
     void Start()
     {
